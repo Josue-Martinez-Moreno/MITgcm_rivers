@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -l nodes=4:ppn=8
+#PBS -N MITgcm_GoM_river_0.025
+
+cd /storage/ioa/josue/MITgcm/0.025grid/run_bath_zav/
+
+pwd
+
+mpirun -np 32 -machinefile $PBS_NODEFILE ./mitgcmuv
+#mpirun -np 8 ./mitgcmuv
+
+date "+%H:%M:%S   %d/%m/%y"

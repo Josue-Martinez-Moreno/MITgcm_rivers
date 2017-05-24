@@ -1,0 +1,55 @@
+# Open-boundaries
+ &OBCS_PARM01
+# OB_Ieast =  117*-1,25*0,32*-1,134*0,
+# OB_Jsouth = 107*0,1*1,177*0,147*1,
+
+# OB_Jsouth = 107*0,1*1,177*0,147*1,
+# OB_Ieast = 118*-1,21*0,42*-1,127*0,
+
+ OB_Jsouth = 107*0,1*1,177*0,147*1,
+ OB_Ieast = 118*-1,22*0,35*-1,1*0,3*-1,129*0,
+
+#OB_Ieast = 308*-1,
+
+# OB_Jsouth = 205*0,147*1,
+#
+ useOBCSsponge = .TRUE.,
+# useOBCSsponge = .FALSE.,
+ useOBCSprescribe = .TRUE.,
+# useOBCSprescribe = .FALSE.,
+ useOBCSbalance=.TRUE.,
+# useOBCSbalance=.FALSE.,
+#
+#
+# OBEast Support 64512 dt 448 days
+ OBEuFile = 'OBEu20140101_20151216.golfoMex_4_period',
+ OBEvFile = 'OBEv20140101_20151216.golfoMex_4_period',
+ OBEtFile = 'OBEtemperature20140101_20151216.golfoMex_4_period',
+ OBEsFile = 'OBEsalinity20140101_20151216.golfoMex_4_period',
+ OBEptrFile(1) = 'OBEptracers20140101_20151216.golfoMex_4_period',
+ OBSuFile = 'OBSu20140101_20151216.golfoMex_4_period',
+ OBSvFile = 'OBSv20140101_20151216.golfoMex_4_period',
+ OBStFile = 'OBStemperature20140101_20151216.golfoMex_4_period',
+ OBSsFile = 'OBSsalinity20140101_20151216.golfoMex_4_period',
+ OBSptrFile(1) = 'OBSptracers20140101_20151216.golfoMex_4_period',
+ &
+ 
+ # Balance flow parameters
+ &OBCS_PARAM01
+ OBCS_balanceFacE = 1., 
+ OBCS_balanceFacS = 1.,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+#Cmax = 0.45,
+#cVelTimeScale = 1000.,
+ &
+# Sponge layer parameters
+ &OBCS_PARM03
+ spongeThickness = 15,
+ Urelaxobcsinner = 864000.0,
+ Urelaxobcsbound = 43200.0,
+ Vrelaxobcsinner = 864000.0,
+ Vrelaxobcsbound = 43200.0,
+ &

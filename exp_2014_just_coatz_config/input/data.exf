@@ -1,0 +1,165 @@
+# $Header: /u/gcmpack/MITgcm_contrib/eh3/llc/ecco-godae/input_50lev/data.exf,v 1.1 2007/03/06 19:13:51 heimbach Exp $
+#
+# *********************
+# External Forcing Data
+# *********************
+ &EXF_NML_01
+ exf_iprec         = 32,
+ exf_yftype        = 'RL',
+ useExfYearlyFields= .false.,
+ twoDigitYear      = .false.,
+ useExfCheckRange  = .false.,
+ &
+#
+ &EXF_NML_02
+#
+ precipfile    = 'precipitation_rate_NCEP_2014_2015.bin',
+ atempfile     = 'air_temperature_2m_NCEP_2014_2015.bin',
+ aqhfile       = 'air_specific_humidity_2m_NCEP_2014_2015.bin',
+ swdownfile    = 'downward_shortwave_rad_NCEP_2014_2015.bin',
+# swfluxfile    = ' ',
+# lwfluxfile    = ' ',
+ lwdownfile    = 'downward_longwave_rad_NCEP_2014_2015.bin', 
+ uwindfile     = 'u_wind_10m_NCEP_2014_2015.bin',
+ vwindfile     = 'v_wind_10m_NCEP_2014_2015.bin',
+ apressurefile = 'pressure_NCEP_2014_2015.bin',
+#
+ uwindstartdate1 = 20140101,
+ uwindstartdate2 = 000000,
+# uwindperiod = 21600.0,
+ uwindperiod = 10800.0,
+#
+ vwindstartdate1 = 20140101,
+ vwindstartdate2 = 000000,
+# vwindperiod = 21600.0,
+ vwindperiod = 10800.0,
+#
+ apressurestartdate1 = 20140101,
+ apressurestartdate2 = 000000,
+ apressureperiod = 10800.0,
+#
+ precipstartdate1 = 20140101,
+ precipstartdate2 = 000000,
+ precipperiod = 10800.0,
+#
+ atempstartdate1 = 20140101,
+ atempstartdate2 = 000000,
+ atempperiod = 10800.0,
+# atempperiod = 21600.0,
+#
+ aqhstartdate1 = 20140101,
+ aqhstartdate2 = 000000,
+ aqhperiod = 10800.0,
+# aqhperiod = 21600.0,
+#
+ swdownstartdate1 = 20140101,
+ swdownstartdate2 = 000000,
+ swdownperiod = 10800.0,
+#
+ swfluxstartdate1 = 20140101,
+ swfluxstartdate2 = 000000,
+ swfluxperiod = 10800.0,
+#
+ lwfluxstartdate1 = 20140101,
+ lwfluxstartdate2 = 000000,
+ lwfluxperiod = 10800.0,
+# lwfluxperiod = 21600.0,
+#
+ lwdownstartdate1 = 20140101,
+ lwdownstartdate2 = 000000,
+ lwdownperiod = 10800.0,
+# lwdownperiod = 21600.0,
+#  
+ 
+ &
+ &EXF_NML_03
+ 
+# Comentado el 29 de Septiembre de 2016 
+ exf_offset_atemp = 0.0,
+# exf_offset_atemp = 273.16,
+ 
+ &
+ &EXF_NML_04
+#
+ uwind_lon0    = 240.125,
+ uwind_lon_inc = 0.25,
+ uwind_lat0    = 10.125,
+ uwind_lat_inc = 91*0.25,
+ uwind_nlon    = 192,
+ uwind_nlat    = 92,
+#
+vwind_lon0    = 240.125,
+ vwind_lon_inc = 0.25,
+ vwind_lat0    = 10.125,
+ vwind_lat_inc = 91*0.25,
+ vwind_nlon    = 192,
+ vwind_nlat    = 92,
+#
+ apressure_lon0    = 240.125,
+ apressure_lon_inc = 0.25,
+ apressure_lat0    = 10.125,
+ apressure_lat_inc = 91*0.25,
+ apressure_nlon    = 192,
+ apressure_nlat    = 92,
+#
+ precip_lon0     = 240.125,
+ precip_lon_inc  = 0.25,
+ precip_lat0     = 10.125,
+ precip_lat_inc  = 91*0.25,
+ precip_nlon     = 192,
+ precip_nlat     = 92,
+#
+ atemp_lon0        = 240.125,
+ atemp_lon_inc     = 0.25,
+ atemp_lat0        = 10.125,
+ atemp_lat_inc     = 91*0.25,
+ atemp_nlon        = 192,
+ atemp_nlat        = 92,
+#
+ aqh_lon0        = 240.125,
+ aqh_lon_inc     = 0.25,
+ aqh_lat0        = 10.125,
+ aqh_lat_inc     = 91*0.25,
+ aqh_nlon        = 192,
+ aqh_nlat        = 92,
+#
+ swdown_lon0        = 240.125,
+ swdown_lon_inc     = 0.25,
+ swdown_lat0        = 10.125,
+ swdown_lat_inc     = 91*0.25,
+ swdown_nlon        = 192,
+ swdown_nlat        = 92,
+#
+ swflux_lon0        = 240.125,
+ swflux_lon_inc     = 0.25,
+ swflux_lat0        = 10.125,
+ swflux_lat_inc     = 91*0.25,
+ swflux_nlon        = 192,
+ swflux_nlat        = 92,
+#
+ lwflux_lon0        = 240.125,
+ lwflux_lon_inc     = 0.25,
+ lwflux_lat0        = 10.125,
+ lwflux_lat_inc     = 91*0.25,
+ lwflux_nlon        = 192,
+ lwflux_nlat        = 92,
+#
+ lwdown_lon0        = 240.125,
+ lwdown_lon_inc     = 0.25,
+ lwdown_lat0        = 10.125,
+ lwdown_lat_inc     = 91*0.25, 
+ lwdown_nlon        = 192,
+ lwdown_nlat        = 92,
+ &
+#
+ &
+ &EXF_NML_OBCS
+ obcsSstartdate1 = 20140101,
+ obcsSstartdate2 = 000000,
+ obcsSperiod = 1209600.0,
+#
+ obcsEstartdate1 = 20140101,
+ obcsEstartdate2 = 000000,
+ obcsEperiod = 1209600.0,
+ 
+ &
